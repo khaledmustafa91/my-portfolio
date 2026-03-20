@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between h-16">
         <a href="#hero" className="font-display font-bold text-lg tracking-tight">
           <span className="text-white">KM</span>
-          <span className="text-[#e63946]">.</span>
+          <span className="text-[var(--accent)]">.</span>
         </a>
 
         {/* Desktop nav */}
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         <a
           href="mailto:khaled.mustafa1297@gmail.com"
-          className="hidden md:inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent-dark)] text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
         >
           Work With Me
         </a>
@@ -96,7 +96,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="mailto:khaled.mustafa1297@gmail.com"
-                  className="inline-block bg-[#e63946] text-white text-sm font-semibold px-4 py-2 rounded-md mt-2"
+                  className="inline-block bg-[var(--accent)] text-white text-sm font-semibold px-4 py-2 rounded-md mt-2"
                   onClick={() => setMenuOpen(false)}
                 >
                   Work With Me

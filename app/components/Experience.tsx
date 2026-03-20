@@ -56,8 +56,8 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Experience</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Experience</span>
         </motion.div>
 
         <motion.h2
@@ -72,7 +72,7 @@ export default function Experience() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#e63946] via-[#e63946]/30 to-transparent" />
+          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--accent)]/30 to-transparent" />
 
           <div className="space-y-10">
             {experiences.map((exp, i) => (
@@ -86,8 +86,8 @@ export default function Experience() {
                 {/* Dot */}
                 <div className={`absolute left-4 md:left-6 top-1.5 w-4 h-4 rounded-full border-2 flex items-center justify-center
                   ${exp.current
-                    ? 'border-[#e63946] bg-[#e63946]'
-                    : 'border-[#e63946]/50 bg-[#0a0a0a]'
+                    ? 'border-[var(--accent)] bg-[var(--accent)]'
+                    : 'border-[var(--accent)]/50 bg-[#0a0a0a]'
                   }`}
                 >
                   {exp.current && (
@@ -95,7 +95,7 @@ export default function Experience() {
                   )}
                 </div>
 
-                <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 hover:border-[#e63946]/30 transition-colors duration-300">
+                <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
                       <h3 className="font-display font-bold text-xl text-white">{exp.company}</h3>
@@ -103,7 +103,7 @@ export default function Experience() {
                     </div>
                     <span className={`text-xs font-semibold px-3 py-1 rounded-full
                       ${exp.current
-                        ? 'bg-[#e63946]/10 text-[#e63946] border border-[#e63946]/30'
+                        ? 'bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30'
                         : 'bg-white/5 text-gray-400 border border-white/10'
                       }`}
                     >

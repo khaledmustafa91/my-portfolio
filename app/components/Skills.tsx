@@ -7,7 +7,7 @@ import { useRef } from 'react';
 const skillGroups = [
   {
     category: 'Backend',
-    color: '#e63946',
+    color: 'var(--accent)',
     skills: ['Ruby', 'Ruby on Rails', 'Sidekiq', 'REST APIs', 'System Design', 'Action Cable', 'WebSockets'],
   },
   {
@@ -45,8 +45,8 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Skills</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Skills</span>
         </motion.div>
 
         <motion.h2
@@ -83,7 +83,7 @@ export default function Skills() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.3 + gi * 0.1 + si * 0.04, duration: 0.3 }}
-                    className="px-3 py-1.5 bg-[#111] border border-[#1f1f1f] rounded-lg text-sm text-gray-300 font-medium hover:border-[#e63946]/40 hover:text-white transition-colors duration-200 cursor-default"
+                    className="px-3 py-1.5 bg-[#111] border border-[#1f1f1f] rounded-lg text-sm text-gray-300 font-medium hover:border-[var(--accent)]/40 hover:text-white transition-colors duration-200 cursor-default"
                     style={{ '--hover-color': group.color } as React.CSSProperties}
                   >
                     {skill}

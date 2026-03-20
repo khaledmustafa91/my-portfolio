@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0a",
-        foreground: "#f5f5f5",
-        accent: "#e63946",
-        "accent-dark": "#c1121f",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        accent: "var(--accent)",
+        "accent-dark": "var(--accent-dark)",
+        "accent-light": "var(--accent-light)",
         surface: "#111111",
         border: "#1f1f1f",
         muted: "#6b7280",

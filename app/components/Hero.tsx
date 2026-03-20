@@ -18,8 +18,8 @@ export default function Hero() {
       className="relative min-h-screen flex items-center grid-bg overflow-hidden"
     >
       {/* Gradient blobs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#e63946]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#e63946]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[var(--accent)]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 py-32 md:py-0 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-16">
@@ -32,8 +32,8 @@ export default function Hero() {
               animate="visible"
               className="flex items-center gap-3 mb-6"
             >
-              <span className="h-px w-10 bg-[#e63946]" />
-              <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">
+              <span className="h-px w-10 bg-[var(--accent)]" />
+              <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">
                 Available for opportunities
               </span>
             </motion.div>
@@ -79,13 +79,13 @@ export default function Hero() {
             >
               <a
                 href="#experience"
-                className="bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm"
+                className="bg-[var(--accent)] hover:bg-[var(--accent-dark)] text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="border border-white/20 hover:border-[#e63946] text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm hover:text-[#e63946]"
+                className="border border-white/20 hover:border-[var(--accent)] text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm hover:text-[var(--accent)]"
               >
                 Contact Me
               </a>
@@ -101,17 +101,17 @@ export default function Hero() {
           >
             <div className="relative w-56 h-56 md:w-72 md:h-72">
               {/* Outer ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-[#e63946]/30 animate-pulse-slow" />
-              <div className="absolute inset-3 rounded-full border border-[#e63946]/20" />
+              <div className="absolute inset-0 rounded-full border-2 border-[var(--accent)]/30 animate-pulse-slow" />
+              <div className="absolute inset-3 rounded-full border border-[var(--accent)]/20" />
               {/* Avatar */}
-              <div className="absolute inset-6 rounded-full bg-gradient-to-br from-[#e63946]/20 to-[#1a1a1a] flex items-center justify-center">
+              <div className="absolute inset-6 rounded-full bg-gradient-to-br from-[var(--accent)]/20 to-[#1a1a1a] flex items-center justify-center">
                 <span className="font-display font-bold text-5xl md:text-6xl text-white/90 select-none">
                   KM
                 </span>
               </div>
               {/* Decorative dots */}
-              <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-[#e63946]" />
-              <div className="absolute bottom-8 left-2 w-2 h-2 rounded-full bg-[#e63946]/50" />
+              <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-[var(--accent)]" />
+              <div className="absolute bottom-8 left-2 w-2 h-2 rounded-full bg-[var(--accent)]/50" />
             </div>
           </motion.div>
         </div>
@@ -127,7 +127,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-            className="w-px h-8 bg-gradient-to-b from-[#e63946] to-transparent"
+            className="w-px h-8 bg-gradient-to-b from-[var(--accent)] to-transparent"
           />
         </motion.div>
       </div>

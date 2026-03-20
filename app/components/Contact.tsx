@@ -62,7 +62,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#e63946]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-max relative" ref={ref}>
         <motion.div
@@ -71,8 +71,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Freelance & Hire</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Freelance & Hire</span>
         </motion.div>
 
         <motion.h2
@@ -129,16 +129,16 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.1, duration: 0.4 }}
-                className="flex items-center gap-4 bg-[#111] border border-[#1f1f1f] rounded-xl p-4 hover:border-[#e63946]/40 hover:bg-[#151515] transition-all duration-200 group"
+                className="flex items-center gap-4 bg-[#111] border border-[#1f1f1f] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[#151515] transition-all duration-200 group"
               >
-                <div className="text-[#e63946] group-hover:scale-110 transition-transform duration-200">
+                <div className="text-[var(--accent)] group-hover:scale-110 transition-transform duration-200">
                   {s.icon}
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 mb-0.5">{s.label}</div>
                   <div className="text-white text-sm font-medium">{s.value}</div>
                 </div>
-                <svg className="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#e63946] transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-600 ml-auto group-hover:text-[var(--accent)] transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </motion.a>
