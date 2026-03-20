@@ -9,22 +9,22 @@
    ============================================================ */
 :root {
   /* Backgrounds */
-  --background:   #09090b;   /* zinc-950 — page background */
-  --background-2: #111116;   /* slightly raised sections */
-  --surface:      #18181b;   /* cards, inputs */
-  --surface-2:    #27272a;   /* elevated tags, code blocks */
-  --border:       #27272a;   /* default border */
-  --border-2:     #3f3f46;   /* tags / code borders */
+  --background:   #faf8f5;   /* warm off-white page bg */
+  --background-2: #f2ede6;   /* slightly deeper alternating sections */
+  --surface:      #ede8e0;   /* cards, inputs */
+  --surface-2:    #e8e0d5;   /* tags, code blocks */
+  --border:       #d6cdc0;   /* default border */
+  --border-2:     #c4b9ab;   /* secondary borders */
 
   /* Text */
-  --foreground:   #fafafa;
-  --muted:        #a1a1aa;
+  --foreground:   #1c1917;   /* warm near-black */
+  --muted:        #78716c;   /* stone-500 */
 
-  /* Accent */
-  --accent:       #3b82f6;   /* blue-500 */
-  --accent-dark:  #2563eb;   /* blue-600 */
-  --accent-light: #93c5fd;   /* blue-300 */
-  --accent-rgb:   59, 130, 246;
+  /* Accent — Terracotta */
+  --accent:       #c2410c;   /* orange-700 */
+  --accent-dark:  #9a3412;   /* orange-800 */
+  --accent-light: #ea580c;   /* orange-600 */
+  --accent-rgb:   194, 65, 12;
 }
 
 * {

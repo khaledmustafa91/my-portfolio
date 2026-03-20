@@ -69,7 +69,7 @@ export default function OpenSource() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-4 leading-tight"
         >
           Gems I&apos;ve
           <span className="gradient-text"> shipped.</span>
@@ -79,7 +79,7 @@ export default function OpenSource() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-gray-400 text-base max-w-xl mb-14"
+          className="text-[var(--muted)] text-base max-w-xl mb-14"
         >
           Ruby gems built to solve real production problems — payment gateways, OTP auth, and more.
         </motion.p>
@@ -98,15 +98,15 @@ export default function OpenSource() {
                 <div className="flex items-center gap-2">
                   <GemIcon />
                   <div>
-                    <span className="text-gray-500 text-xs">{gem.org} /</span>
-                    <h3 className="font-display font-bold text-white text-lg leading-tight">{gem.name}</h3>
+                    <span className="text-[var(--muted)] text-xs">{gem.org} /</span>
+                    <h3 className="font-display font-bold text-[var(--foreground)] text-lg leading-tight">{gem.name}</h3>
                   </div>
                 </div>
                 <a
                   href={gem.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-white transition-colors duration-200 flex-shrink-0"
+                  className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors duration-200 flex-shrink-0"
                   aria-label={`View ${gem.name} on GitHub`}
                 >
                   <GitHubIcon />
@@ -114,7 +114,7 @@ export default function OpenSource() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed flex-1">{gem.description}</p>
+              <p className="text-[var(--muted)] text-sm leading-relaxed flex-1">{gem.description}</p>
 
               {/* Highlights */}
               <div className="flex flex-wrap gap-1.5">
@@ -133,7 +133,7 @@ export default function OpenSource() {
                 href={gem.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-gray-500 hover:text-[var(--accent)] transition-colors duration-200 font-medium group-hover:text-gray-300"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors duration-200 font-medium group-hover:text-[var(--foreground)]/60"
               >
                 <span className="font-mono text-xs truncate">{gem.url.replace('https://', '')}</span>
                 <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

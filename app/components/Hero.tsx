@@ -55,7 +55,7 @@ export default function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-xl md:text-2xl font-display font-medium text-gray-300 mb-4"
+              className="text-xl md:text-2xl font-display font-medium text-[var(--foreground)]/60 mb-4"
             >
               Senior Backend Engineer
             </motion.p>
@@ -65,7 +65,7 @@ export default function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl"
+              className="text-[var(--muted)] text-base md:text-lg leading-relaxed mb-10 max-w-xl"
             >
               I build scalable Rails systems, open-source gems, and AI-integrated products.
             </motion.p>
@@ -85,7 +85,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="border border-white/20 hover:border-[var(--accent)] text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm hover:text-[var(--accent)]"
+                className="border border-[var(--foreground)]/20 hover:border-[var(--accent)] text-[var(--foreground)] font-semibold px-6 py-3 rounded-md transition-colors duration-200 text-sm hover:text-[var(--accent)]"
               >
                 Contact Me
               </a>
@@ -104,8 +104,8 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full border-2 border-[var(--accent)]/30 animate-pulse-slow" />
               <div className="absolute inset-3 rounded-full border border-[var(--accent)]/20" />
               {/* Avatar */}
-              <div className="absolute inset-6 rounded-full bg-gradient-to-br from-[var(--accent)]/20 to-[#1a1a1a] flex items-center justify-center">
-                <span className="font-display font-bold text-5xl md:text-6xl text-white/90 select-none">
+              <div className="absolute inset-6 rounded-full bg-gradient-to-br from-[var(--accent)]/20 to-[var(--surface)] flex items-center justify-center">
+                <span className="font-display font-bold text-5xl md:text-6xl text-[var(--foreground)]/90 select-none">
                   KM
                 </span>
               </div>
@@ -123,7 +123,7 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.6 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-gray-600 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-[var(--muted)] text-xs tracking-widest uppercase">Scroll</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}

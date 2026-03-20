@@ -53,7 +53,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-14 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-14 leading-tight"
         >
           Tools of the
           <span className="gradient-text"> trade.</span>
@@ -72,7 +72,7 @@ export default function Skills() {
                   className="w-2 h-2 rounded-full flex-shrink-0"
                   style={{ backgroundColor: group.color }}
                 />
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
                   {group.category}
                 </h3>
               </div>
@@ -83,7 +83,7 @@ export default function Skills() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.3 + gi * 0.1 + si * 0.04, duration: 0.3 }}
-                    className="px-3 py-1.5 bg-[#111] border border-[var(--border)] rounded-lg text-sm text-gray-300 font-medium hover:border-[var(--accent)]/40 hover:text-white transition-colors duration-200 cursor-default"
+                    className="px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-lg text-sm text-[var(--foreground)]/60 font-medium hover:border-[var(--accent)]/40 hover:text-[var(--foreground)] transition-colors duration-200 cursor-default"
                     style={{ '--hover-color': group.color } as React.CSSProperties}
                   >
                     {skill}

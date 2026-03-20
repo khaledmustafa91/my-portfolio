@@ -64,7 +64,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-14 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-14 leading-tight"
         >
           Where I&apos;ve
           <span className="gradient-text"> worked.</span>
@@ -98,26 +98,26 @@ export default function Experience() {
                 <div className="bg-[#111] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
-                      <h3 className="font-display font-bold text-xl text-white">{exp.company}</h3>
-                      <p className="text-gray-300 font-medium text-sm mt-0.5">{exp.role}</p>
+                      <h3 className="font-display font-bold text-xl text-[var(--foreground)]">{exp.company}</h3>
+                      <p className="text-[var(--foreground)]/60 font-medium text-sm mt-0.5">{exp.role}</p>
                     </div>
                     <span className={`text-xs font-semibold px-3 py-1 rounded-full
                       ${exp.current
                         ? 'bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30'
-                        : 'bg-white/5 text-gray-400 border border-white/10'
+                        : 'bg-white/5 text-[var(--muted)] border border-white/10'
                       }`}
                     >
                       {exp.period}
                     </span>
                   </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{exp.description}</p>
+                  <p className="text-[var(--muted)] text-sm leading-relaxed mb-4">{exp.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-medium px-2.5 py-1 bg-[var(--surface-2)] border border-[var(--border-2)] text-gray-300 rounded-md"
+                        className="text-xs font-medium px-2.5 py-1 bg-[var(--surface-2)] border border-[var(--border-2)] text-[var(--foreground)]/60 rounded-md"
                       >
                         {tag}
                       </span>
