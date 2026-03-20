@@ -17,7 +17,7 @@ const experiences = [
   {
     company: 'ILLA',
     role: 'Senior Backend Developer',
-    period: 'Nov 2024',
+    period: 'Nov 2024 – Nov 2025',
     description:
       'Leading backend development for a supply chain & logistics platform serving FMCG brands. Architecting scalable Rails systems, managing containerized deployments on AWS, and driving async job processing with Sidekiq.',
     tags: ['Rails', 'Docker', 'AWS', 'Semaphore CI/CD'],
