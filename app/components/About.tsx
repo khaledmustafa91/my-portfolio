@@ -43,18 +43,18 @@ export default function About() {
             <div className="space-y-4 text-gray-400 text-base leading-relaxed">
               <p>
                 I&apos;m a Software Engineer with <strong className="text-white">4+ years</strong> of experience
-                building scalable web applications with <strong className="text-white">Ruby on Rails</strong>.
+                building scalable web applications, with a strong focus on{' '}
+                <strong className="text-white">Ruby on Rails</strong> and backend architecture.
               </p>
               <p>
-                Currently at <strong className="text-white">OneBench</strong> — a supply chain &amp;
-                logistics platform for FMCG brands — where I architect backend systems,
-                optimize performance, and ship reliable infrastructure.
+                I specialize in designing and delivering robust APIs, distributed systems, and
+                cloud-native infrastructure. I enjoy solving hard engineering problems —
+                whether that&apos;s optimizing database performance, building reliable async
+                pipelines, or shipping open-source tools the community can use.
               </p>
               <p>
-                I&apos;m passionate about backend architecture, open-source tooling, and
-                AI-integrated products. I&apos;m currently building{' '}
-                <strong className="text-white">SpeakScore</strong> — an AI SaaS platform for
-                ESL teachers using Rails, Next.js, OpenAI Whisper, and the Claude API.
+                Outside of work, I contribute to open source and explore the intersection
+                of backend engineering and AI-powered products.
               </p>
               <p className="flex items-center gap-2">
                 <span className="text-[#e63946]">📍</span> Based in Cairo, Egypt
