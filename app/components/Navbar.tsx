@@ -26,9 +26,12 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]
+        ${scrolled
+          ? 'md:bg-[var(--background)]/90 md:backdrop-blur-md md:border-b md:border-[var(--border)]'
+          : 'md:bg-transparent md:backdrop-blur-none md:border-transparent'
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between h-16">
         <a href="#hero" className="font-display font-bold text-lg tracking-tight">

@@ -95,7 +95,9 @@ export default function Experience() {
                   )}
                 </div>
 
-                <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
+                <div className={`bg-[var(--surface)] border rounded-xl p-6 transition-all duration-300 hover:bg-[var(--surface-2)] hover:border-[var(--accent)]/50 hover:-translate-y-0.5 hover:shadow-md hover:shadow-[var(--accent)]/5 ${
+                  exp.current ? 'border-[var(--accent)]/50' : 'border-[var(--border)]'
+                }`}>
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
                       <h3 className="font-display font-bold text-xl text-[var(--foreground)]">{exp.company}</h3>
