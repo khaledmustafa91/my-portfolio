@@ -50,13 +50,18 @@ const socials = [
   },
 ];
 
+const services = [
+  { icon: '⚙️', title: 'API & Backend Development', desc: 'Custom REST APIs, background jobs, and scalable Rails systems tailored to your product.' },
+  { icon: '☁️', title: 'Cloud & DevOps', desc: 'Dockerized deployments, AWS infrastructure, CI/CD pipelines, and monitoring setup.' },
+  { icon: '🔗', title: 'Third-party Integrations', desc: 'Payment gateways, SMS providers, AI APIs, and any service your product needs.' },
+];
+
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
     <section id="contact" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
-      {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#e63946]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-max relative" ref={ref}>
@@ -67,7 +72,7 @@ export default function Contact() {
           className="flex items-center gap-3 mb-4"
         >
           <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Contact</span>
+          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Freelance & Hire</span>
         </motion.div>
 
         <motion.h2
@@ -76,29 +81,45 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight"
         >
-          Let&apos;s build something
-          <span className="gradient-text"> together.</span>
+          Got a project? Let&apos;s
+          <span className="gradient-text"> make it happen.</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-gray-400 text-base max-w-xl mb-14"
+          className="text-gray-400 text-base max-w-2xl mb-10"
         >
-          I&apos;m open to backend engineering roles, freelance projects, and interesting collaborations.
-          Drop me a message and I&apos;ll get back to you.
+          I take on freelance backend projects — from greenfield APIs to legacy system upgrades.
+          Tell me about your idea and I&apos;ll get back to you within 24 hours.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Social links */}
+        {/* Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid sm:grid-cols-3 gap-4 mb-14"
+        >
+          {services.map((s) => (
+            <div key={s.title} className="bg-[#111] border border-[#1f1f1f] rounded-xl p-5">
+              <div className="text-2xl mb-3">{s.icon}</div>
+              <h4 className="text-white font-semibold text-sm mb-1">{s.title}</h4>
+              <p className="text-gray-500 text-xs leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        <div className="max-w-xl">
+          {/* Socials */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
             className="space-y-4"
           >
-            <h3 className="text-white font-semibold text-lg mb-6">Find me online</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">Reach me directly</h3>
             {socials.map((s, i) => (
               <motion.a
                 key={s.label}
@@ -107,7 +128,7 @@ export default function Contact() {
                 rel={s.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
                 initial={{ opacity: 0, x: -10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
+                transition={{ delay: 0.35 + i * 0.1, duration: 0.4 }}
                 className="flex items-center gap-4 bg-[#111] border border-[#1f1f1f] rounded-xl p-4 hover:border-[#e63946]/40 hover:bg-[#151515] transition-all duration-200 group"
               >
                 <div className="text-[#e63946] group-hover:scale-110 transition-transform duration-200">
@@ -124,81 +145,14 @@ export default function Contact() {
             ))}
           </motion.div>
 
-          {/* Contact form — Netlify */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.25 }}
-          >
-            <h3 className="text-white font-semibold text-lg mb-6">Send a message</h3>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="space-y-4"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Don&apos;t fill this out: <input name="bot-field" /></label>
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs text-gray-500 mb-1.5" htmlFor="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Your name"
-                    className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-500 mb-1.5" htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="you@example.com"
-                    className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs text-gray-500 mb-1.5" htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="What's this about?"
-                  className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs text-gray-500 mb-1.5" htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Tell me about your project..."
-                  className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200 resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold py-3 rounded-lg transition-colors duration-200 text-sm"
-              >
-                Send Message
-              </button>
+          {/* Project inquiry form — hidden for now
+          <motion.div ...>
+            <h3>Tell me about your project</h3>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              ... (form fields: name, email, project-type, budget, message)
             </form>
           </motion.div>
+          */}
         </div>
       </div>
     </section>

@@ -54,7 +54,7 @@ export default function Navbar() {
           href="mailto:khaled.mustafa1297@gmail.com"
           className="hidden md:inline-flex items-center gap-2 bg-[#e63946] hover:bg-[#c1121f] text-white text-sm font-semibold px-4 py-2 rounded-md transition-colors duration-200"
         >
-          Hire Me
+          Work With Me
         </a>
 
         {/* Mobile menu button */}
@@ -99,7 +99,7 @@ export default function Navbar() {
                   className="inline-block bg-[#e63946] text-white text-sm font-semibold px-4 py-2 rounded-md mt-2"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Hire Me
+                  Work With Me
                 </a>
               </li>
             </ul>
