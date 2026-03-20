@@ -10,7 +10,7 @@ const experiences = [
     role: 'Senior Backend Developer',
     period: 'Dec 2025 – Present',
     description:
-      'Leading backend development for a supply chain & logistics platform serving FMCG brands. Architecting scalable Rails systems, managing containerized deployments on AWS, and driving async job processing with Sidekiq.',
+      'Multi-tenant SaaS platform that empowers organizations to run AI agents, automate data pipelines, and integrate with their core business tools. Contribute to backend architecture and system design, build and maintain API integrations with external services, develop data infrastructure solutions, and drive features from technical specification through to production — collaborating closely with frontend and product to deliver a reliable, scalable platform.',
     tags: ['Rails', 'Docker', 'AWS', 'Sidekiq'],
     current: true,
   },
@@ -19,7 +19,7 @@ const experiences = [
     role: 'Senior Backend Developer',
     period: 'Nov 2024',
     description:
-      'Contributed to backend architecture and CI/CD pipeline improvements. Focused on containerization and automated deployments using Semaphore CI/CD.',
+      'Leading backend development for a supply chain & logistics platform serving FMCG brands. Architecting scalable Rails systems, managing containerized deployments on AWS, and driving async job processing with Sidekiq.',
     tags: ['Rails', 'Docker', 'AWS', 'Semaphore CI/CD'],
     current: false,
   },

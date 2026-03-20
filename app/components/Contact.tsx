@@ -111,8 +111,8 @@ export default function Contact() {
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left — socials + note */}
+        <div className="max-w-xl">
+          {/* Socials */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -143,108 +143,16 @@ export default function Contact() {
                 </svg>
               </motion.a>
             ))}
-
-            <p className="text-gray-600 text-xs pt-2 leading-relaxed">
-              Form submissions are delivered directly to my inbox via{' '}
-              <span className="text-gray-500">Netlify Forms</span>. I typically respond within 24 hours.
-            </p>
           </motion.div>
 
-          {/* Right — project inquiry form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h3 className="text-white font-semibold text-lg mb-6">Tell me about your project</h3>
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="space-y-4"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Don&apos;t fill this out: <input name="bot-field" /></label>
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs text-gray-500 mb-1.5" htmlFor="name">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="John Smith"
-                    className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-500 mb-1.5" htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="you@company.com"
-                    className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs text-gray-500 mb-1.5" htmlFor="project-type">Project Type</label>
-                <select
-                  id="project-type"
-                  name="project-type"
-                  className="w-full bg-[#111] border border-[#1f1f1f] text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                >
-                  <option value="" className="bg-[#111]">Select a service...</option>
-                  <option value="api-backend" className="bg-[#111]">API & Backend Development</option>
-                  <option value="cloud-devops" className="bg-[#111]">Cloud & DevOps Setup</option>
-                  <option value="integrations" className="bg-[#111]">Third-party Integrations</option>
-                  <option value="consulting" className="bg-[#111]">Technical Consulting</option>
-                  <option value="other" className="bg-[#111]">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs text-gray-500 mb-1.5" htmlFor="budget">Estimated Budget</label>
-                <select
-                  id="budget"
-                  name="budget"
-                  className="w-full bg-[#111] border border-[#1f1f1f] text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200"
-                >
-                  <option value="" className="bg-[#111]">Select a range...</option>
-                  <option value="lt-1k" className="bg-[#111]">Under $1,000</option>
-                  <option value="1k-5k" className="bg-[#111]">$1,000 – $5,000</option>
-                  <option value="5k-15k" className="bg-[#111]">$5,000 – $15,000</option>
-                  <option value="gt-15k" className="bg-[#111]">$15,000+</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs text-gray-500 mb-1.5" htmlFor="message">Project Details</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  placeholder="Describe your project, goals, and timeline..."
-                  className="w-full bg-[#111] border border-[#1f1f1f] text-white placeholder-gray-600 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e63946]/50 transition-colors duration-200 resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#e63946] hover:bg-[#c1121f] text-white font-semibold py-3 rounded-lg transition-colors duration-200 text-sm"
-              >
-                Start the Conversation →
-              </button>
+          {/* Project inquiry form — hidden for now
+          <motion.div ...>
+            <h3>Tell me about your project</h3>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              ... (form fields: name, email, project-type, budget, message)
             </form>
           </motion.div>
+          */}
         </div>
       </div>
     </section>
