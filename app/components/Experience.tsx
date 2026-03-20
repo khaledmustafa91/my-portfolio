@@ -91,11 +91,11 @@ export default function Experience() {
                   }`}
                 >
                   {exp.current && (
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-[var(--background)] animate-pulse" />
                   )}
                 </div>
 
-                <div className="bg-[#111] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
+                <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
                       <h3 className="font-display font-bold text-xl text-[var(--foreground)]">{exp.company}</h3>
@@ -104,7 +104,7 @@ export default function Experience() {
                     <span className={`text-xs font-semibold px-3 py-1 rounded-full
                       ${exp.current
                         ? 'bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30'
-                        : 'bg-white/5 text-[var(--muted)] border border-white/10'
+                        : 'bg-[var(--foreground)]/5 text-[var(--muted)] border border-[var(--border)]'
                       }`}
                     >
                       {exp.period}

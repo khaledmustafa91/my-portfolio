@@ -76,7 +76,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                  className="bg-[#111] border border-[var(--border)] rounded-xl p-5 text-center"
+                  className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 text-center"
                 >
                   <div className="font-display font-bold text-3xl text-[var(--accent)] mb-1">{stat.value}</div>
                   <div className="text-[var(--muted)] text-xs leading-tight">{stat.label}</div>
@@ -85,7 +85,7 @@ export default function About() {
             </div>
 
             {/* Tech stack snippet */}
-            <div className="bg-[#111] border border-[var(--border)] rounded-xl p-6 font-mono text-sm">
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 font-mono text-sm">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-3 h-3 rounded-full bg-[var(--accent)]" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -93,10 +93,10 @@ export default function About() {
                 <span className="text-[var(--muted)] text-xs ml-2">stack.rb</span>
               </div>
               <div className="space-y-1">
-                <p><span className="text-[var(--accent)]">primary</span><span className="text-[var(--muted)]">:</span> <span className="text-green-400">&quot;Ruby on Rails&quot;</span></p>
-                <p><span className="text-[var(--accent)]">frontend</span><span className="text-[var(--muted)]">:</span> <span className="text-green-400">&quot;Next.js / React&quot;</span></p>
-                <p><span className="text-[var(--accent)]">infra</span><span className="text-[var(--muted)]">:</span> <span className="text-green-400">&quot;Docker / AWS&quot;</span></p>
-                <p><span className="text-[var(--accent)]">ai</span><span className="text-[var(--muted)]">:</span> <span className="text-green-400">&quot;OpenAI / Claude&quot;</span></p>
+                <p><span className="text-[var(--accent)]">primary</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Ruby on Rails&quot;</span></p>
+                <p><span className="text-[var(--accent)]">frontend</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Next.js / React&quot;</span></p>
+                <p><span className="text-[var(--accent)]">infra</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Docker / AWS&quot;</span></p>
+                <p><span className="text-[var(--accent)]">ai</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;OpenAI / Claude&quot;</span></p>
               </div>
             </div>
           </motion.div>

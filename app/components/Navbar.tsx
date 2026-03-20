@@ -27,7 +27,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[var(--background)]/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
+        scrolled ? 'bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between h-16">
@@ -64,9 +64,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <div className="w-5 flex flex-col gap-1">
-            <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-            <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+            <span className={`block h-0.5 bg-[var(--foreground)] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+            <span className={`block h-0.5 bg-[var(--foreground)] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 bg-[var(--foreground)] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
           </div>
         </button>
       </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-[var(--background)]/98 border-b border-white/5"
+            className="md:hidden bg-[var(--background)]/98 border-b border-[var(--border)]"
           >
             <ul className="flex flex-col px-6 py-4 gap-4">
               {navLinks.map((link) => (

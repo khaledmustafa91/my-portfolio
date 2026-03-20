@@ -103,7 +103,7 @@ export default function Contact() {
           className="grid sm:grid-cols-3 gap-4 mb-14"
         >
           {services.map((s) => (
-            <div key={s.title} className="bg-[#111] border border-[var(--border)] rounded-xl p-5">
+            <div key={s.title} className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
               <div className="text-2xl mb-3">{s.icon}</div>
               <h4 className="text-[var(--foreground)] font-semibold text-sm mb-1">{s.title}</h4>
               <p className="text-[var(--muted)] text-xs leading-relaxed">{s.desc}</p>
@@ -129,7 +129,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.1, duration: 0.4 }}
-                className="flex items-center gap-4 bg-[#111] border border-[var(--border)] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] transition-all duration-200 group"
+                className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] transition-all duration-200 group"
               >
                 <div className="text-[var(--accent)] group-hover:scale-110 transition-transform duration-200">
                   {s.icon}

@@ -91,7 +91,7 @@ export default function OpenSource() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
-              className="group bg-[#111] border border-[var(--border)] rounded-xl p-6 flex flex-col gap-4 hover:border-[var(--accent)]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--accent)]/5"
+              className="group bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 flex flex-col gap-4 hover:border-[var(--accent)]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--accent)]/5"
             >
               {/* Header */}
               <div className="flex items-start justify-between">
