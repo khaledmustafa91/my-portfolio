@@ -53,7 +53,7 @@ export default function OpenSource() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="open-source" className="section-padding bg-[#0d0d0d]">
+    <section id="open-source" className="section-padding bg-[var(--background-2)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ export default function OpenSource() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
-              className="group bg-[#111] border border-[#1f1f1f] rounded-xl p-6 flex flex-col gap-4 hover:border-[var(--accent)]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--accent)]/5"
+              className="group bg-[#111] border border-[var(--border)] rounded-xl p-6 flex flex-col gap-4 hover:border-[var(--accent)]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--accent)]/5"
             >
               {/* Header */}
               <div className="flex items-start justify-between">

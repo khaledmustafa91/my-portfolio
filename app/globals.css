@@ -5,15 +5,26 @@
 @tailwind utilities;
 
 /* ============================================================
-   THEME TOKENS — change accent color here only
+   THEME TOKENS — edit only this block to retheme the site
    ============================================================ */
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --accent: #f59e0b;
-  --accent-dark: #d97706;
-  --accent-light: #fcd34d;
-  --accent-rgb: 245, 158, 11;  /* used for rgba() glows */
+  /* Backgrounds */
+  --background:   #09090b;   /* zinc-950 — page background */
+  --background-2: #111116;   /* slightly raised sections */
+  --surface:      #18181b;   /* cards, inputs */
+  --surface-2:    #27272a;   /* elevated tags, code blocks */
+  --border:       #27272a;   /* default border */
+  --border-2:     #3f3f46;   /* tags / code borders */
+
+  /* Text */
+  --foreground:   #fafafa;
+  --muted:        #a1a1aa;
+
+  /* Accent */
+  --accent:       #3b82f6;   /* blue-500 */
+  --accent-dark:  #2563eb;   /* blue-600 */
+  --accent-light: #93c5fd;   /* blue-300 */
+  --accent-rgb:   59, 130, 246;
 }
 
 * {
@@ -69,12 +80,11 @@ body {
 
 .card-hover {
   @apply transition-all duration-300 hover:-translate-y-1;
-  transition-property: transform, box-shadow;
 }
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(var(--accent-rgb), 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--accent-rgb), 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(var(--accent-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }

@@ -15,7 +15,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="section-padding bg-[#0d0d0d]">
+    <section id="about" className="section-padding bg-[var(--background-2)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                  className="bg-[#111] border border-[#1f1f1f] rounded-xl p-5 text-center"
+                  className="bg-[#111] border border-[var(--border)] rounded-xl p-5 text-center"
                 >
                   <div className="font-display font-bold text-3xl text-[var(--accent)] mb-1">{stat.value}</div>
                   <div className="text-gray-500 text-xs leading-tight">{stat.label}</div>
@@ -85,7 +85,7 @@ export default function About() {
             </div>
 
             {/* Tech stack snippet */}
-            <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 font-mono text-sm">
+            <div className="bg-[#111] border border-[var(--border)] rounded-xl p-6 font-mono text-sm">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-3 h-3 rounded-full bg-[var(--accent)]" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500" />

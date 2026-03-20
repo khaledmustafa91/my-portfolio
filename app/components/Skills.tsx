@@ -37,7 +37,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="skills" className="section-padding bg-[#0a0a0a]">
+    <section id="skills" className="section-padding bg-[var(--background)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export default function Skills() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.3 + gi * 0.1 + si * 0.04, duration: 0.3 }}
-                    className="px-3 py-1.5 bg-[#111] border border-[#1f1f1f] rounded-lg text-sm text-gray-300 font-medium hover:border-[var(--accent)]/40 hover:text-white transition-colors duration-200 cursor-default"
+                    className="px-3 py-1.5 bg-[#111] border border-[var(--border)] rounded-lg text-sm text-gray-300 font-medium hover:border-[var(--accent)]/40 hover:text-white transition-colors duration-200 cursor-default"
                     style={{ '--hover-color': group.color } as React.CSSProperties}
                   >
                     {skill}

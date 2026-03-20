@@ -48,7 +48,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="experience" className="section-padding bg-[#0a0a0a]">
+    <section id="experience" className="section-padding bg-[var(--background)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export default function Experience() {
                 <div className={`absolute left-4 md:left-6 top-1.5 w-4 h-4 rounded-full border-2 flex items-center justify-center
                   ${exp.current
                     ? 'border-[var(--accent)] bg-[var(--accent)]'
-                    : 'border-[var(--accent)]/50 bg-[#0a0a0a]'
+                    : 'border-[var(--accent)]/50 bg-[var(--background)]'
                   }`}
                 >
                   {exp.current && (
@@ -95,7 +95,7 @@ export default function Experience() {
                   )}
                 </div>
 
-                <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
+                <div className="bg-[#111] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)]/30 transition-colors duration-300">
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
                       <h3 className="font-display font-bold text-xl text-white">{exp.company}</h3>
@@ -117,7 +117,7 @@ export default function Experience() {
                     {exp.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-medium px-2.5 py-1 bg-[#1a1a1a] border border-[#2a2a2a] text-gray-300 rounded-md"
+                        className="text-xs font-medium px-2.5 py-1 bg-[var(--surface-2)] border border-[var(--border-2)] text-gray-300 rounded-md"
                       >
                         {tag}
                       </span>

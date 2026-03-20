@@ -61,7 +61,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="contact" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
+    <section id="contact" className="section-padding bg-[var(--background-2)] relative overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-max relative" ref={ref}>
@@ -103,7 +103,7 @@ export default function Contact() {
           className="grid sm:grid-cols-3 gap-4 mb-14"
         >
           {services.map((s) => (
-            <div key={s.title} className="bg-[#111] border border-[#1f1f1f] rounded-xl p-5">
+            <div key={s.title} className="bg-[#111] border border-[var(--border)] rounded-xl p-5">
               <div className="text-2xl mb-3">{s.icon}</div>
               <h4 className="text-white font-semibold text-sm mb-1">{s.title}</h4>
               <p className="text-gray-500 text-xs leading-relaxed">{s.desc}</p>
@@ -129,7 +129,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.1, duration: 0.4 }}
-                className="flex items-center gap-4 bg-[#111] border border-[#1f1f1f] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[#151515] transition-all duration-200 group"
+                className="flex items-center gap-4 bg-[#111] border border-[var(--border)] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] transition-all duration-200 group"
               >
                 <div className="text-[var(--accent)] group-hover:scale-110 transition-transform duration-200">
                   {s.icon}
