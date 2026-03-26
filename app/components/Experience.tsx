@@ -48,7 +48,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="experience" className="section-padding bg-[#0a0a0a]">
+    <section id="experience" className="section-padding bg-[var(--background)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,15 +56,15 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Experience</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Experience</span>
         </motion.div>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-14 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-14 leading-tight"
         >
           Where I&apos;ve
           <span className="gradient-text"> worked.</span>
@@ -72,7 +72,7 @@ export default function Experience() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[#e63946] via-[#e63946]/30 to-transparent" />
+          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--accent)] via-[var(--accent)]/30 to-transparent" />
 
           <div className="space-y-10">
             {experiences.map((exp, i) => (
@@ -86,38 +86,40 @@ export default function Experience() {
                 {/* Dot */}
                 <div className={`absolute left-4 md:left-6 top-1.5 w-4 h-4 rounded-full border-2 flex items-center justify-center
                   ${exp.current
-                    ? 'border-[#e63946] bg-[#e63946]'
-                    : 'border-[#e63946]/50 bg-[#0a0a0a]'
+                    ? 'border-[var(--accent)] bg-[var(--accent)]'
+                    : 'border-[var(--accent)]/50 bg-[var(--background)]'
                   }`}
                 >
                   {exp.current && (
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-[var(--background)] animate-pulse" />
                   )}
                 </div>
 
-                <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 hover:border-[#e63946]/30 transition-colors duration-300">
+                <div className={`bg-[var(--surface)] border rounded-xl p-6 transition-all duration-300 hover:bg-[var(--surface-2)] hover:border-[var(--accent)]/50 hover:-translate-y-0.5 hover:shadow-md hover:shadow-[var(--accent)]/5 ${
+                  exp.current ? 'border-[var(--accent)]/50' : 'border-[var(--border)]'
+                }`}>
                   <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                     <div>
-                      <h3 className="font-display font-bold text-xl text-white">{exp.company}</h3>
-                      <p className="text-gray-300 font-medium text-sm mt-0.5">{exp.role}</p>
+                      <h3 className="font-display font-bold text-xl text-[var(--foreground)]">{exp.company}</h3>
+                      <p className="text-[var(--foreground)]/60 font-medium text-sm mt-0.5">{exp.role}</p>
                     </div>
                     <span className={`text-xs font-semibold px-3 py-1 rounded-full
                       ${exp.current
-                        ? 'bg-[#e63946]/10 text-[#e63946] border border-[#e63946]/30'
-                        : 'bg-white/5 text-gray-400 border border-white/10'
+                        ? 'bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30'
+                        : 'bg-[var(--foreground)]/5 text-[var(--muted)] border border-[var(--border)]'
                       }`}
                     >
                       {exp.period}
                     </span>
                   </div>
 
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{exp.description}</p>
+                  <p className="text-[var(--muted)] text-sm leading-relaxed mb-4">{exp.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs font-medium px-2.5 py-1 bg-[#1a1a1a] border border-[#2a2a2a] text-gray-300 rounded-md"
+                        className="text-xs font-medium px-2.5 py-1 bg-[var(--surface-2)] border border-[var(--border-2)] text-[var(--foreground)]/60 rounded-md"
                       >
                         {tag}
                       </span>

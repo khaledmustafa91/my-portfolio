@@ -15,7 +15,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="section-padding bg-[#0d0d0d]">
+    <section id="about" className="section-padding bg-[var(--background-2)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,8 +23,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">About Me</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">About Me</span>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -34,17 +34,17 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-6 leading-tight">
               Building backends
               <br />
               <span className="gradient-text">that scale.</span>
             </h2>
 
-            <div className="space-y-4 text-gray-400 text-base leading-relaxed">
+            <div className="space-y-4 text-[var(--muted)] text-base leading-relaxed">
               <p>
-                I&apos;m a Software Engineer with <strong className="text-white">4+ years</strong> of experience
+                I&apos;m a Software Engineer with <strong className="text-[var(--foreground)] font-semibold">4+ years</strong> of experience
                 building scalable web applications, with a strong focus on{' '}
-                <strong className="text-white">Ruby on Rails</strong> and backend architecture.
+                <strong className="text-[var(--foreground)] font-semibold">Ruby on Rails</strong> and backend architecture.
               </p>
               <p>
                 I specialize in designing and delivering robust APIs, distributed systems, and
@@ -57,7 +57,7 @@ export default function About() {
                 of backend engineering and AI-powered products.
               </p>
               <p className="flex items-center gap-2">
-                <span className="text-[#e63946]">📍</span> Based in Cairo, Egypt
+                <span className="text-[var(--accent)]">📍</span> Based in Cairo, Egypt
               </p>
             </div>
           </motion.div>
@@ -76,27 +76,27 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                  className="bg-[#111] border border-[#1f1f1f] rounded-xl p-5 text-center"
+                  className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 text-center"
                 >
-                  <div className="font-display font-bold text-3xl text-[#e63946] mb-1">{stat.value}</div>
-                  <div className="text-gray-500 text-xs leading-tight">{stat.label}</div>
+                  <div className="font-display font-bold text-3xl text-[var(--accent)] mb-1">{stat.value}</div>
+                  <div className="text-[var(--muted)] text-xs leading-tight">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
 
             {/* Tech stack snippet */}
-            <div className="bg-[#111] border border-[#1f1f1f] rounded-xl p-6 font-mono text-sm">
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 font-mono text-sm">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-3 h-3 rounded-full bg-[#e63946]" />
+                <span className="w-3 h-3 rounded-full bg-[var(--accent)]" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500" />
                 <span className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-gray-600 text-xs ml-2">stack.rb</span>
+                <span className="text-[var(--muted)] text-xs ml-2">stack.rb</span>
               </div>
               <div className="space-y-1">
-                <p><span className="text-[#e63946]">primary</span><span className="text-gray-400">:</span> <span className="text-green-400">&quot;Ruby on Rails&quot;</span></p>
-                <p><span className="text-[#e63946]">frontend</span><span className="text-gray-400">:</span> <span className="text-green-400">&quot;Next.js / React&quot;</span></p>
-                <p><span className="text-[#e63946]">infra</span><span className="text-gray-400">:</span> <span className="text-green-400">&quot;Docker / AWS&quot;</span></p>
-                <p><span className="text-[#e63946]">ai</span><span className="text-gray-400">:</span> <span className="text-green-400">&quot;OpenAI / Claude&quot;</span></p>
+                <p><span className="text-[var(--accent)]">primary</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Ruby on Rails&quot;</span></p>
+                <p><span className="text-[var(--accent)]">frontend</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Next.js / React&quot;</span></p>
+                <p><span className="text-[var(--accent)]">infra</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;Docker / AWS&quot;</span></p>
+                <p><span className="text-[var(--accent)]">ai</span><span className="text-[var(--muted)]">:</span> <span className="text-emerald-700">&quot;OpenAI / Claude&quot;</span></p>
               </div>
             </div>
           </motion.div>

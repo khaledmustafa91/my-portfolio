@@ -61,8 +61,8 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="contact" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#e63946]/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="contact" className="section-padding bg-[var(--background-2)] relative overflow-hidden">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-max relative" ref={ref}>
         <motion.div
@@ -71,15 +71,15 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Freelance & Hire</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Freelance & Hire</span>
         </motion.div>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-4 leading-tight"
         >
           Got a project? Let&apos;s
           <span className="gradient-text"> make it happen.</span>
@@ -89,7 +89,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-gray-400 text-base max-w-2xl mb-10"
+          className="text-[var(--muted)] text-base max-w-2xl mb-10"
         >
           I take on freelance backend projects — from greenfield APIs to legacy system upgrades.
           Tell me about your idea and I&apos;ll get back to you within 24 hours.
@@ -103,10 +103,10 @@ export default function Contact() {
           className="grid sm:grid-cols-3 gap-4 mb-14"
         >
           {services.map((s) => (
-            <div key={s.title} className="bg-[#111] border border-[#1f1f1f] rounded-xl p-5">
+            <div key={s.title} className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5">
               <div className="text-2xl mb-3">{s.icon}</div>
-              <h4 className="text-white font-semibold text-sm mb-1">{s.title}</h4>
-              <p className="text-gray-500 text-xs leading-relaxed">{s.desc}</p>
+              <h4 className="text-[var(--foreground)] font-semibold text-sm mb-1">{s.title}</h4>
+              <p className="text-[var(--muted)] text-xs leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </motion.div>
@@ -119,7 +119,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="space-y-4"
           >
-            <h3 className="text-white font-semibold text-lg mb-6">Reach me directly</h3>
+            <h3 className="text-[var(--foreground)] font-semibold text-lg mb-6">Reach me directly</h3>
             {socials.map((s, i) => (
               <motion.a
                 key={s.label}
@@ -129,16 +129,16 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.1, duration: 0.4 }}
-                className="flex items-center gap-4 bg-[#111] border border-[#1f1f1f] rounded-xl p-4 hover:border-[#e63946]/40 hover:bg-[#151515] transition-all duration-200 group"
+                className="flex items-center gap-4 bg-[var(--surface)] border border-[var(--border)] rounded-xl p-4 hover:border-[var(--accent)]/40 hover:bg-[var(--surface)] transition-all duration-200 group"
               >
-                <div className="text-[#e63946] group-hover:scale-110 transition-transform duration-200">
+                <div className="text-[var(--accent)] group-hover:scale-110 transition-transform duration-200">
                   {s.icon}
                 </div>
                 <div>
-                  <div className="text-xs text-gray-500 mb-0.5">{s.label}</div>
-                  <div className="text-white text-sm font-medium">{s.value}</div>
+                  <div className="text-xs text-[var(--muted)] mb-0.5">{s.label}</div>
+                  <div className="text-[var(--foreground)] text-sm font-medium">{s.value}</div>
                 </div>
-                <svg className="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#e63946] transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[var(--muted)] ml-auto group-hover:text-[var(--accent)] transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </motion.a>

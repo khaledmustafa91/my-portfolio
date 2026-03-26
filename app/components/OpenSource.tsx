@@ -33,7 +33,7 @@ const gems = [
 
 function GemIcon() {
   return (
-    <svg className="w-5 h-5 text-[#e63946]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
         d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
     </svg>
@@ -53,7 +53,7 @@ export default function OpenSource() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="open-source" className="section-padding bg-[#0d0d0d]">
+    <section id="open-source" className="section-padding bg-[var(--background-2)]">
       <div className="container-max" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,15 +61,15 @@ export default function OpenSource() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-4"
         >
-          <span className="h-px w-10 bg-[#e63946]" />
-          <span className="text-[#e63946] text-sm font-semibold tracking-widest uppercase">Open Source</span>
+          <span className="h-px w-10 bg-[var(--accent)]" />
+          <span className="text-[var(--accent)] text-sm font-semibold tracking-widest uppercase">Open Source</span>
         </motion.div>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-bold text-4xl md:text-5xl text-white mb-4 leading-tight"
+          className="font-display font-bold text-4xl md:text-5xl text-[var(--foreground)] mb-4 leading-tight"
         >
           Gems I&apos;ve
           <span className="gradient-text"> shipped.</span>
@@ -79,7 +79,7 @@ export default function OpenSource() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-gray-400 text-base max-w-xl mb-14"
+          className="text-[var(--muted)] text-base max-w-xl mb-14"
         >
           Ruby gems built to solve real production problems — payment gateways, OTP auth, and more.
         </motion.p>
@@ -91,22 +91,22 @@ export default function OpenSource() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
-              className="group bg-[#111] border border-[#1f1f1f] rounded-xl p-6 flex flex-col gap-4 hover:border-[#e63946]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#e63946]/5"
+              className="group bg-[var(--surface)] border border-[var(--border-2)] rounded-xl p-6 flex flex-col gap-4 hover:border-[var(--accent)]/60 hover:bg-[var(--surface-2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--accent)]/8"
             >
               {/* Header */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-2">
                   <GemIcon />
                   <div>
-                    <span className="text-gray-500 text-xs">{gem.org} /</span>
-                    <h3 className="font-display font-bold text-white text-lg leading-tight">{gem.name}</h3>
+                    <span className="text-[var(--muted)] text-xs">{gem.org} /</span>
+                    <h3 className="font-display font-bold text-[var(--foreground)] text-lg leading-tight">{gem.name}</h3>
                   </div>
                 </div>
                 <a
                   href={gem.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-white transition-colors duration-200 flex-shrink-0"
+                  className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors duration-200 flex-shrink-0"
                   aria-label={`View ${gem.name} on GitHub`}
                 >
                   <GitHubIcon />
@@ -114,14 +114,14 @@ export default function OpenSource() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed flex-1">{gem.description}</p>
+              <p className="text-[var(--muted)] text-sm leading-relaxed flex-1">{gem.description}</p>
 
               {/* Highlights */}
               <div className="flex flex-wrap gap-1.5">
                 {gem.highlights.map((h) => (
                   <span
                     key={h}
-                    className="text-xs px-2 py-0.5 bg-[#e63946]/10 text-[#e63946] border border-[#e63946]/20 rounded-md"
+                    className="text-xs px-2 py-0.5 bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20 rounded-md"
                   >
                     {h}
                   </span>
@@ -133,7 +133,7 @@ export default function OpenSource() {
                 href={gem.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-gray-500 hover:text-[#e63946] transition-colors duration-200 font-medium group-hover:text-gray-300"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors duration-200 font-medium group-hover:text-[var(--foreground)]/60"
               >
                 <span className="font-mono text-xs truncate">{gem.url.replace('https://', '')}</span>
                 <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
